@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dperezS5.MainPage">
+
+    <StackLayout>
+        <Label Text="Consumo de Servicio Web" HorizontalTextAlignment="Center" FontSize="24"/>
+        <ListView x:Name="listaCanciones">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblCodigo" Text="{Binding Codigo}"/>
+                            <Label x:Name="lblAutor" Text="{Binding Autor}"/>
+                            <Label x:Name="lblAlbum" Text="{Binding Album}"/>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnMostrar" Text="Mostrar" Clicked="btnMostrar_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
