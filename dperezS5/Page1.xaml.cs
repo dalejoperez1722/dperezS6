@@ -41,7 +41,7 @@ namespace dperezS5
             string nombre = objetoEstudiante.nombre.ToString();
             string apellido = objetoEstudiante.apellido.ToString();
             int edad=Convert.ToInt32(objetoEstudiante.edad.ToString());
-            Navigation.PushAsync(new AcEliminar());
+            Navigation.PushAsync(new AcEliminar(objetoEstudiante));
 
         }
 
