@@ -31,7 +31,7 @@ namespace dperezS5
                 parametros.Add("edad",txtEdad.Text);
                 cliente.UploadValues(Url, "POST", parametros);
                 //mensaje toast
-                var mensaje = "Dato Ingresado";
+                var mensaje = "Dato Ingresado Correctamente";
                 DependencyService.Get<Mensaje>().LongAlert(mensaje);
                 Navigation.PushAsync(new Page1());
 
