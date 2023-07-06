@@ -30,14 +30,18 @@ namespace dperezS5
                 parametros.Add("apellido",txtApellido.Text);
                 parametros.Add("edad",txtEdad.Text);
                 cliente.UploadValues(Url, "POST", parametros);
-                DisplayAlert("Alerta", "Ingreso correcto", "cerrar");
+                //mensaje toast
+                var mensaje = "Dato Ingresado";
+                DependencyService.Get<Mensaje>().LongAlert(mensaje);
                 Navigation.PushAsync(new Page1());
 
             }
             catch (Exception ex)
             {
 
-                DisplayAlert("Alerta", ex.Message, "cerrar");
+                //mensaje toast
+                var mensaje = "Cerrando";
+                DependencyService.Get<Mensaje>().LongAlert(mensaje);
             }
 
         }
